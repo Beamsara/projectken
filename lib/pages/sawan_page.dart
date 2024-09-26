@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projectken/pages/home_page.dart';
 import 'package:projectken/pages/leong_page.dart';
+import 'package:projectken/pages/map_sawan.dart';
 import 'package:projectken/pages/snv_page.dart';
 import 'package:projectken/pages/travel_page.dart';
 
@@ -82,13 +83,6 @@ class SawanPage extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'พิกัด: https://maps.app.goo.gl/7gfnpFTUpSPJ69Jt9',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                      ),
-                    ),
-                    Text(
                       'โทร. -',
                       style: TextStyle(fontSize: 14),
                     ),
@@ -104,6 +98,24 @@ class SawanPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MapSawan()),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          Icon(Icons.map_outlined, color: Colors.black),
+                          SizedBox(width: 8), // เพิ่มระยะห่างระหว่างไอคอนกับข้อความ
+                          Text(
+                            'พิกัด',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

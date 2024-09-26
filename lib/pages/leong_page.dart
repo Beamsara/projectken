@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectken/pages/home_page.dart';
+import 'package:projectken/pages/map_leong.dart';
 import 'package:projectken/pages/travel_page.dart';
 
 class LeongPage extends StatelessWidget {
@@ -121,6 +122,24 @@ class LeongPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MapLeong()),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          Icon(Icons.map_outlined, color: Colors.black),
+                          SizedBox(width: 8), // เพิ่มระยะห่างระหว่างไอคอนกับข้อความ
+                          Text(
+                            'พิกัด',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

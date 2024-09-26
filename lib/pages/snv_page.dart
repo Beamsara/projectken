@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectken/pages/home_page.dart';
+import 'package:projectken/pages/map_snv.dart';
 import 'package:projectken/pages/travel_page.dart';
 
 class SnvPage extends StatelessWidget {
@@ -110,11 +111,29 @@ class SnvPage extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'ที่อยู่: 703 ถนนประดิษฐ์มนูธรรม ระหว่างซอย 13-15\nสะพานสอง วังทองหลาง กรุงเทพฯ 10310\n(เลี้ยวขวาซอยด้านขวามือจากลาดพร้าว-เกษตรนวมินทร์)',
+                      'ที่อยู่: 737/6 หมู่ที่ 10 ถนน มาตุลี ตำบลปากน้ำโพ อ.เมือง นครสวรรค์ 60000',
                       style: TextStyle(fontSize: 14),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MapSnv()),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          Icon(Icons.map_outlined, color: Colors.black),
+                          SizedBox(width: 8), // เพิ่มระยะห่างระหว่างไอคอนกับข้อความ
+                          Text(
+                            'พิกัด',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

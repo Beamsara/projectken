@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projectken/pages/boraped_page.dart';
 import 'package:projectken/pages/home_page.dart';
 import 'package:projectken/pages/leong_page.dart';
+import 'package:projectken/pages/pasan_page.dart';
 import 'package:projectken/pages/sawan_page.dart';
 import 'package:projectken/pages/snv_page.dart';
 
@@ -57,91 +58,128 @@ class TravelPage extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center, // จัดตรงกลางในแนวนอน
-          children: [
-            SizedBox(height: 20),
-            Text(
-              'แนะนำสถานที่ท่องเที่ยว',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SawanPage()),
-                );
-              },
-              child: Container(
-                margin: EdgeInsets.all(10),
-                width: 300, // ขนาดความกว้างคงที่ของบล็อก
-                height: 200, // ขนาดความสูงคงที่ของบล็อก
-                decoration: BoxDecoration(
-                  color: Colors.blue[50],
-                  borderRadius: BorderRadius.circular(10),
+      body: SingleChildScrollView( // ใช้ SingleChildScrollView เพื่อเลื่อนเนื้อหาได้
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 20),
+              Text(
+                'แนะนำสถานที่ท่องเที่ยว',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 150, // ขนาดความกว้างของรูปภาพคงที่
-                      height: 150, // ขนาดความสูงของรูปภาพคงที่
-                      child: Image.asset(
-                        'assets/images/sawan.jpg',
-                        fit: BoxFit.cover, // ปรับขนาดรูปภาพให้พอดี
+              ),
+              SizedBox(height: 20),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SawanPage()),
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  width: 300, // ขนาดความกว้างคงที่ของบล็อก
+                  height: 200, // ขนาดความสูงคงที่ของบล็อก
+                  decoration: BoxDecoration(
+                    color: Colors.blue[50],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 150, // ขนาดความกว้างของรูปภาพคงที่
+                        height: 150, // ขนาดความสูงของรูปภาพคงที่
+                        child: Image.asset(
+                          'assets/images/sawan.jpg',
+                          fit: BoxFit.cover, // ปรับขนาดรูปภาพให้พอดี
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10), // ระยะห่างระหว่างรูปภาพและข้อความ
-                    Text(
-                      'อุทยานสวรรค์',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BorapedPage()),
-                );
-              },
-              child: Container(
-                margin: EdgeInsets.all(10),
-                width: 300, // ขนาดความกว้างคงที่ของบล็อก
-                height: 200, // ขนาดความสูงคงที่ของบล็อก
-                decoration: BoxDecoration(
-                  color: Colors.blue[50],
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 150, // ขนาดความกว้างของรูปภาพคงที่
-                      height: 150, // ขนาดความสูงของรูปภาพคงที่
-                      child: Image.asset(
-                        'assets/images/boraped.jpg',
-                        fit: BoxFit.cover, // ปรับขนาดรูปภาพให้พอดี
+                      SizedBox(height: 10), // ระยะห่างระหว่างรูปภาพและข้อความ
+                      Text(
+                        'อุทยานสวรรค์',
+                        style: TextStyle(fontSize: 18),
                       ),
-                    ),
-                    SizedBox(height: 10), // ระยะห่างระหว่างรูปภาพและข้อความ
-                    Text(
-                      'บึงบอระเพ็ด',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BorapedPage()),
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  width: 300, // ขนาดความกว้างคงที่ของบล็อก
+                  height: 200, // ขนาดความสูงคงที่ของบล็อก
+                  decoration: BoxDecoration(
+                    color: Colors.blue[50],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 150, // ขนาดความกว้างของรูปภาพคงที่
+                        height: 150, // ขนาดความสูงของรูปภาพคงที่
+                        child: Image.asset(
+                          'assets/images/boraped.jpg',
+                          fit: BoxFit.cover, // ปรับขนาดรูปภาพให้พอดี
+                        ),
+                      ),
+                      SizedBox(height: 10), // ระยะห่างระหว่างรูปภาพและข้อความ
+                      Text(
+                        'บึงบอระเพ็ด',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PasanPage()),
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  width: 300, // ขนาดความกว้างคงที่ของบล็อก
+                  height: 200, // ขนาดความสูงคงที่ของบล็อก
+                  decoration: BoxDecoration(
+                    color: Colors.blue[50],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 150, // ขนาดความกว้างของรูปภาพคงที่
+                        height: 150, // ขนาดความสูงของรูปภาพคงที่
+                        child: Image.asset(
+                          'assets/images/pasan.jpg',
+                          fit: BoxFit.cover, // ปรับขนาดรูปภาพให้พอดี
+                        ),
+                      ),
+                      SizedBox(height: 10), // ระยะห่างระหว่างรูปภาพและข้อความ
+                      Text(
+                        'พาสาน',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(

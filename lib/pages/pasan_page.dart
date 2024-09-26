@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:projectken/pages/home_page.dart';
-import 'package:projectken/pages/leong_page.dart';
-import 'package:projectken/pages/map_boraped.dart';
-import 'package:projectken/pages/snv_page.dart';
+import 'package:projectken/pages/map_leong.dart';
+import 'package:projectken/pages/map_pasan.dart';
 import 'package:projectken/pages/travel_page.dart';
 
-class BorapedPage extends StatelessWidget {
-  const BorapedPage({super.key});
+class PasanPage extends StatelessWidget {
+  const PasanPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,10 +71,11 @@ class BorapedPage extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: [
+                    // ภาพอาหารที่แสดง
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        'assets/images/boraped_travel1.jpg', //
+                        'assets/images/pasan_page.jpg',
                         fit: BoxFit.cover,
                         height: 200,
                         width: 400,
@@ -83,23 +83,17 @@ class BorapedPage extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'โทร. 0-5627-4522',
+                      'โทร. -',
                       style: TextStyle(fontSize: 14),
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'เวลาเปิด: สามารถเที่ยวชมได้ตลอดทั้งวัน',
+                      'เวลาเปิด: 10.00-20.00 น.',
                       style: TextStyle(fontSize: 14),
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'ที่อยู่: ตำบลพระนอน อำเภอเมืองนครสวรรค์ จังหวัดนครสวรรค์',
-                      style: TextStyle(fontSize: 14),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      'เว็บไซต์: https://www.facebook.com/buengboraphetnakonsawan',
+                      'ที่อยู่: ถนนนครสวรรค์ตก อ.เมือง จ.นครสวรรค',
                       style: TextStyle(fontSize: 14),
                       textAlign: TextAlign.center,
                     ),
@@ -108,7 +102,7 @@ class BorapedPage extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MapBoraped()),
+                          MaterialPageRoute(builder: (context) => MapPasan()),
                         );
                       },
                       child: Row(
